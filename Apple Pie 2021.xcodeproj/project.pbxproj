@@ -14,6 +14,7 @@
 		7AA42CEA261AE3A20060CBAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AA42CE9261AE3A20060CBAD /* Assets.xcassets */; };
 		7AA42CED261AE3A20060CBAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AA42CEB261AE3A20060CBAD /* LaunchScreen.storyboard */; };
 		7AA42CF6261C0E590060CBAD /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA42CF5261C0E590060CBAD /* Game.swift */; };
+		7AA42CFB261C37D60060CBAD /* Screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AA42CFA261C37D60060CBAD /* Screenshot.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		7AA42CEC261AE3A20060CBAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7AA42CEE261AE3A20060CBAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7AA42CF5261C0E590060CBAD /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		7AA42CFA261C37D60060CBAD /* Screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		7AA42CDF261AE3A10060CBAD /* Apple Pie 2021 */ = {
 			isa = PBXGroup;
 			children = (
+				7AA42CF9261C375A0060CBAD /* Screenshot */,
 				7AA42CE0261AE3A10060CBAD /* AppDelegate.swift */,
 				7AA42CE9261AE3A20060CBAD /* Assets.xcassets */,
 				7AA42CF5261C0E590060CBAD /* Game.swift */,
@@ -68,6 +71,14 @@
 				7AA42CE4261AE3A10060CBAD /* ViewController.swift */,
 			);
 			path = "Apple Pie 2021";
+			sourceTree = "<group>";
+		};
+		7AA42CF9261C375A0060CBAD /* Screenshot */ = {
+			isa = PBXGroup;
+			children = (
+				7AA42CFA261C37D60060CBAD /* Screenshot.png */,
+			);
+			path = Screenshot;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +141,7 @@
 				7AA42CED261AE3A20060CBAD /* LaunchScreen.storyboard in Resources */,
 				7AA42CEA261AE3A20060CBAD /* Assets.xcassets in Resources */,
 				7AA42CE8261AE3A10060CBAD /* Main.storyboard in Resources */,
+				7AA42CFB261C37D60060CBAD /* Screenshot.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
