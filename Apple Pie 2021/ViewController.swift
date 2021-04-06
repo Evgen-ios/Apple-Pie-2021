@@ -100,16 +100,37 @@ class ViewController: UIViewController {
         "Шэньян",
         "Эр-Рияд",
         "Янгон"
-    ]
+    ].shuffled()
     
-    var totalWins = 0
-    var totalLosses = 0
+    var totalWins = 0 {
+        didSet {
+            newRound()
+        }
+    }
+    var totalLosses = 0 {
+        didSet {
+            newRound()
+        }
+    }
     
     // MARK: - Methods
+    
+    func enableButtons(_ enable: Bool = true) {
+        for button in letterButtons {
+            button.isEnabled = enable
+        }
+    }
+    
     func newRound() {
+        guard !listOfWorlds.isEmpty else {
+            enableButtons(false)
+            updtaUI()
+            return
+        }
         let newWords = listOfWorlds.removeFirst()
         curretGame = Game(word: newWords, incorrectMovesRemaining: incorrectMovesAllowed)
         updtaUI()
+        enableButtons()
     }
     
     func curretCorrectWordLable() {
@@ -119,6 +140,16 @@ class ViewController: UIViewController {
         }
         correctWordLable.text = displayWord.joined(separator: " ")
         
+    }
+    
+    func updateState() {
+        if curretGame.incorrectMovesRemaining < 1 {
+            totalLosses += 1
+        } else if curretGame.guessedWord == curretGame.word {
+            totalWins += 1
+        } else {
+            updtaUI()
+        }
     }
     
     func updtaUI() {
@@ -145,7 +176,7 @@ class ViewController: UIViewController {
         sender.isEnabled = false
         let letter = sender.title(for: .normal)!
         curretGame.playerGuessed(letter: Character(letter))
-        updtaUI()
+        updateState()
     }
 }
 
