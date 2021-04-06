@@ -13,6 +13,7 @@
 		7AA42CE8261AE3A10060CBAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AA42CE6261AE3A10060CBAD /* Main.storyboard */; };
 		7AA42CEA261AE3A20060CBAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AA42CE9261AE3A20060CBAD /* Assets.xcassets */; };
 		7AA42CED261AE3A20060CBAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AA42CEB261AE3A20060CBAD /* LaunchScreen.storyboard */; };
+		7AA42CF6261C0E590060CBAD /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA42CF5261C0E590060CBAD /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7AA42CE9261AE3A20060CBAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7AA42CEC261AE3A20060CBAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7AA42CEE261AE3A20060CBAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AA42CF5261C0E590060CBAD /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				7AA42CE0261AE3A10060CBAD /* AppDelegate.swift */,
+				7AA42CE9261AE3A20060CBAD /* Assets.xcassets */,
+				7AA42CF5261C0E590060CBAD /* Game.swift */,
+				7AA42CEE261AE3A20060CBAD /* Info.plist */,
+				7AA42CEB261AE3A20060CBAD /* LaunchScreen.storyboard */,
+				7AA42CE6261AE3A10060CBAD /* Main.storyboard */,
 				7AA42CE2261AE3A10060CBAD /* SceneDelegate.swift */,
 				7AA42CE4261AE3A10060CBAD /* ViewController.swift */,
-				7AA42CE6261AE3A10060CBAD /* Main.storyboard */,
-				7AA42CE9261AE3A20060CBAD /* Assets.xcassets */,
-				7AA42CEB261AE3A20060CBAD /* LaunchScreen.storyboard */,
-				7AA42CEE261AE3A20060CBAD /* Info.plist */,
 			);
 			path = "Apple Pie 2021";
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 				7AA42CE5261AE3A10060CBAD /* ViewController.swift in Sources */,
 				7AA42CE1261AE3A10060CBAD /* AppDelegate.swift in Sources */,
 				7AA42CE3261AE3A10060CBAD /* SceneDelegate.swift in Sources */,
+				7AA42CF6261C0E590060CBAD /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
