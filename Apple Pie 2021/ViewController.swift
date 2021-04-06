@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     // MARK: - IB Outlets
     @IBOutlet weak var treeImageView: UIImageView!
     @IBOutlet var letterButtons: [UIButton]!
-    @IBOutlet weak var coorectWordLable: UILabel!
+    @IBOutlet weak var correctWordLable: UILabel!
     @IBOutlet weak var scoreLable: UILabel!
     
     // MARK: - Properties
@@ -112,10 +112,25 @@ class ViewController: UIViewController {
         updtaUI()
     }
     
+    func curretCorrectWordLable() {
+        var displayWord = [String]()
+        for letter in curretGame.guessedWord {
+            displayWord.append(String(letter))
+        }
+        correctWordLable.text = displayWord.joined(separator: " ")
+        
+    }
+    
     func updtaUI() {
         let movesRemaining = curretGame.incorrectMovesRemaining
-        let image = "Tree\(movesRemaining < 8 ? movesRemaining : 7)"
+        
+        // Double ternary operator
+        // let imageNumber = movesRemaining < 0 ? 0 : movesRemaining < 8 ? movesRemaining : 7
+        // Short variant
+        let imageNumber = (movesRemaining + 64) % 8
+        let image = "Tree\(imageNumber)"
         treeImageView.image = UIImage(named: image)
+        curretCorrectWordLable()
         scoreLable.text = "Выигрыши: \(totalWins), проигрыши: \(totalLosses)"
     }
     
@@ -128,6 +143,9 @@ class ViewController: UIViewController {
     // MARK: - IB Action
     @IBAction func letterButtonsPresed(_ sender: UIButton) {
         sender.isEnabled = false
+        let letter = sender.title(for: .normal)!
+        curretGame.playerGuessed(letter: Character(letter))
+        updtaUI()
     }
 }
 
